@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+  database:
+    image: postgres
+    restart: on-failure
+    volumes:
+      - ./.pgdata:/var/lib/postgresql/data
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_PASSWORD=Parques
+      - POSTGRES_USER=Parques
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=Parques_db
+    ports:
+      - 5432:5432
+    expose:
+      - "5432"
