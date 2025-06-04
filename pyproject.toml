@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "parques-contagem"
+version = "0.1.0"
+description = ""
+authors = ["Davidson <deivisonj1@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.2.1"
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+flake8 = "^7.2.0"
+python-decouple = "^3.8"
+dj-database-url = "^2.3.0"
+psycopg2-binary = "^2.9.10"
+psycopg = "^3.2.9"
+django-s3-folder-storage = "^0.5"
+boto3 = "^1.38.25"
+django-storages = "^1.14.6"
+collectfast = "^2.2.0"
+sentry-sdk = "^2.29.1"
+gunicorn = "^23.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
