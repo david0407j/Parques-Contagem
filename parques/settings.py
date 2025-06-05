@@ -33,12 +33,6 @@ DEBUG = config("DEBUG", cast=bool)
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
 
 AUTH_USER_MODEL = "base.User"
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "parques-contagem.fly.dev",
-]
-
 
 # Application definition
 
@@ -117,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LLANGUAGE_CODE = "pt-br"
+LANGUAGE_CODE = "pt-br"
 
 TIME_ZONE = "America/Sao_Paulo"
 
@@ -162,7 +156,7 @@ if AWS_ACCESS_KEY_ID:
     STATICFILES_STORAGE = "s3_folder_storage.s3.StaticStorage"
     STATIC_S3_PATH = "static"
     STATIC_ROOT = f"/{STATIC_S3_PATH}/"
-    STATIC_URL = f"//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{STATIC_S3_PATH}/"
+    STATIC_URL = f"//{AWS_STORAGE_BUCKET_NAME}.s3.sa-east-1.amazonaws.com//{STATIC_S3_PATH}/"
     ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
     # Upload Media Folder
