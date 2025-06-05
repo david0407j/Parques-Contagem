@@ -32,6 +32,11 @@ DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
 
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "parques-contagem.fly.dev",
+]
 AUTH_USER_MODEL = "base.User"
 
 # Application definition
@@ -156,7 +161,9 @@ if AWS_ACCESS_KEY_ID:
     STATICFILES_STORAGE = "s3_folder_storage.s3.StaticStorage"
     STATIC_S3_PATH = "static"
     STATIC_ROOT = f"/{STATIC_S3_PATH}/"
-    STATIC_URL = f"//{AWS_STORAGE_BUCKET_NAME}.s3.sa-east-1.amazonaws.com//{STATIC_S3_PATH}/"
+    STATIC_URL = (
+        f"//{AWS_STORAGE_BUCKET_NAME}.s3.sa-east-1.amazonaws.com//{STATIC_S3_PATH}/"
+    )
     ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
     # Upload Media Folder
