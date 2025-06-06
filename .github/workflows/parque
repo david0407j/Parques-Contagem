@@ -10,10 +10,9 @@ on:
 
 jobs:
   build:
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+    name: Executar CI
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres:14
@@ -39,25 +38,33 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Setup Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v4
         with:
           python-version: 3.11
-          architecture: x64
 
-      - name: Criar .env manualmente
+      - name: Criar arquivo .env
         run: |
           echo "POSTGRES_USER=Parques" >> .env
           echo "POSTGRES_PASSWORD=Parques" >> .env
           echo "POSTGRES_DB=postgres" >> .env
+          echo "DB_HOST=localhost" >> .env
+          echo "DB_PORT=5432" >> .env
           echo "DEBUG=True" >> .env
           echo "ALLOWED_HOSTS=localhost,127.0.0.1" >> .env
 
-      - name: Instalar dependências
+      - name: Instalar dependências com Poetry
         run: |
           pip install poetry
           poetry install
 
-      - name: Preparar banco de dados
+      - name: Esperar PostgreSQL estar pronto
+        run: |
+          until pg_isready -h localhost -p 5432; do
+            echo "Aguardando PostgreSQL..."
+            sleep 2
+          done
+
+      - name: Rodar migrações do Django
         run: |
           poetry run python manage.py migrate
 
@@ -65,6 +72,6 @@ jobs:
         run: |
           poetry run flake8
 
-      - name: Executar testes
+      - name: Rodar testes com pytest
         run: |
           poetry run pytest
