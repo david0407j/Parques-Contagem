@@ -2,7 +2,7 @@
 {% load static %}
 {% block body %}
 
-  <div class="hero">
+  <div class="hero" style="background-image: url('{% static 'img/parque.JPG' %}');">
     <h1 class="hidden">Parques Fernão Dias, Gentil Diniz e Sapucaias</h1>
     <p class="hidden delay-1">Três exemplos de como a arquitetura urbana pode transformar espaços públicos em áreas verdes sustentáveis e acolhedoras.</p>
     <a href="#parques" class="btn hidden delay-2">Conheça os Parques</a>
@@ -25,7 +25,7 @@
   <section id="parques">
     <h2 class="section-title hidden">Nossos Parques</h2>
     <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;" class="hidden">Conheça em detalhes cada um destes espaços urbanos transformadores.</p>
-    
+
     <div class="parques-grid">
       <!-- Parque Fernão Dias -->
       <div class="parque-card hidden delay-1">
@@ -39,7 +39,7 @@
             Zona Norte - Área de antiga rodovia
           </p>
           <p>Um parque linear que transformou um corredor de infraestrutura em espaço de convivência, com ciclovias, jardins de chuva e áreas de descanso.</p>
-          
+
           <div class="detalhes">
             <span class="detalhe-item">
               <i class="fas fa-ruler-combined"></i>
@@ -50,7 +50,7 @@
               1.200 árvores
             </span>
           </div>
-          
+
           <div class="detalhes">
             <span class="detalhe-item">
               <i class="fas fa-bicycle"></i>
@@ -61,11 +61,11 @@
               Sistema de drenagem
             </span>
           </div>
-          
+
           <a href="#" class="card-link">Ver projeto completo <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      
+
       <!-- Parque Gentil Diniz -->
       <div class="parque-card hidden delay-2">
         <div class="card-img">
@@ -78,7 +78,7 @@
             Centro - Área revitalizada
           </p>
           <p>Um oásis urbano com lago artificial, mirante e amplas áreas de convivência, projetado para ser um refúgio verde no coração da cidade.</p>
-          
+
           <div class="detalhes">
             <span class="detalhe-item">
               <i class="fas fa-ruler-combined"></i>
@@ -89,7 +89,7 @@
               800 árvores
             </span>
           </div>
-          
+
           <div class="detalhes">
             <span class="detalhe-item">
               <i class="fas fa-water"></i>
@@ -100,11 +100,11 @@
               Quiosques
             </span>
           </div>
-          
+
           <a href="#" class="card-link">Ver projeto completo <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      
+
       <!-- Parque Sapucaias -->
       <div class="parque-card hidden delay-3">
         <div class="card-img">
@@ -117,7 +117,7 @@
             Zona Leste - Vale natural
           </p>
           <p>Preservação de área natural com trilhas ecológicas, centro de educação ambiental e espaços para práticas esportivas não competitivas.</p>
-          
+
           <div class="detalhes">
             <span class="detalhe-item">
               <i class="fas fa-ruler-combined"></i>
@@ -128,7 +128,7 @@
               Mata nativa
             </span>
           </div>
-          
+
           <div class="detalhes">
             <span class="detalhe-item">
               <i class="fas fa-hiking"></i>
@@ -139,7 +139,7 @@
               Centro educativo
             </span>
           </div>
-          
+
           <a href="#" class="card-link">Ver projeto completo <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -152,7 +152,7 @@
       <div class="contato-info hidden">
         <h3>Informações para visitação</h3>
         <p>Os parques estão abertos ao público diariamente, com entrada gratuita. Confira os horários e programações especiais.</p>
-        
+
         <ul>
           <li>
             <i class="fas fa-clock"></i>
@@ -168,18 +168,18 @@
           </li>
         </ul>
       </div>
-      
+
       <form class="hidden delay-1">
         <div class="form-group">
           <label for="nome">Nome</label>
           <input type="text" id="nome" required>
         </div>
-        
+
         <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" required>
         </div>
-        
+
         <div class="form-group">
           <label for="parque">Parque de interesse</label>
           <select id="parque" required>
@@ -189,12 +189,12 @@
             <option value="sapucaias">Parque Sapucaias</option>
           </select>
         </div>
-        
+
         <div class="form-group">
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" rows="3" required></textarea>
         </div>
-        
+
         <button type="submit" class="form-btn">Enviar Mensagem</button>
       </form>
     </div>
