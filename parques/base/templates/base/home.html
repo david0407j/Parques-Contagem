@@ -3,146 +3,149 @@
 {% block body %}
 
 
-  <div class="hero">
-    <h1 class="hidden">Parques Fernão Dias, Gentil Diniz e Sapucaias</h1>
-  </div>
-  <section id="sobre">
-    <h2 class="section-title hidden">Sobre os Parques</h2>
-    <div class="sobre-content">
-      <div>
-        <p class="hidden">Os parques urbanos Fernão Dias, Gentil Diniz e Sapucaias representam a nova geração de espaços verdes públicos, projetados para promover qualidade de vida, sustentabilidade e integração comunitária.</p>
-        <p class="hidden delay-1">Cada parque foi cuidadosamente planejado para atender às necessidades específicas de seu entorno, mantendo uma identidade visual comum que reflete os valores de preservação ambiental e acessibilidade.</p>
-        <p class="hidden delay-2">Estes projetos combinam paisagismo nativo, infraestrutura sustentável e design inovador para criar espaços que são ao mesmo tempo funcionais e belos.</p>
-      </div>
-      <div class="sobre-img hidden delay-1">
-        <img src="{% static 'img/rafa.JPG' %}" alt="Vista aérea de parque urbano">
-      </div>
-    </div>
-  </section>
+ <div class="hero">
+    <h1 class="hidden">Parques Urbanos Fernão Dias, Gentil Diniz e Sapucaias</h1>
+</div>
 
-  <section id="parques">
-    <h2 class="section-title hidden">Nossos Parques</h2>
-    <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;" class="hidden">Conheça em detalhes cada um destes espaços urbanos transformadores.</p>
-    
-    <div class="parques-grid">
-      <!-- Parque Fernão Dias -->
-      <div class="parque-card hidden delay-1">
-        <div class="card-img">
-          <img src="{% static 'img/parques.jpg' %}" alt="Parque Fernão Dias">
+<section id="sobre">
+    <h2 class="section-title hidden">Conheça o Projeto Viva Contagem</h2>
+    <div class="sobre-content">
+        <div>
+            <p class="hidden">Os Parques Urbanos Fernão Dias, Gentil Diniz e Sapucaias constituem a mais recente geração de áreas verdes públicas, meticulosamente projetadas para fomentar qualidade de vida, sustentabilidade ambiental e integração sociocomunitária.</p>
+            <p class="hidden delay-1">Cada unidade foi concebida mediante criterioso planejamento urbano, atendendo às particularidades de seu entorno, preservando uma identidade visual coesa que materializa os princípios de preservação ecológica e acessibilidade universal.</p>
+            <p class="hidden delay-2">Estes empreendimentos sintetizam paisagismo com espécies nativas, infraestrutura ambientalmente sustentável e design urbano inovador, resultando em espaços públicos que harmonizam funcionalidade urbana e valor estético.</p>
         </div>
-        <div class="card-content">
-          <h3>Parque Fernão Dias</h3>
-          <p class="localizacao">
-            <i class="fas fa-map-marker-alt"></i>
-            Zona Norte - Área de antiga rodovia
-          </p>
-          <p>Um parque linear que transformou um corredor de infraestrutura em espaço de convivência, com ciclovias, jardins de chuva e áreas de descanso.</p>
-          
-          <div class="detalhes">
-            <span class="detalhe-item">
-              <i class="fas fa-ruler-combined"></i>
-              12 hectares
-            </span>
-            <span class="detalhe-item">
-              <i class="fas fa-tree"></i>
-              1.200 árvores
-            </span>
-          </div>
-          
-          <div class="detalhes">
-            <span class="detalhe-item">
-              <i class="fas fa-bicycle"></i>
-              Ciclovia 5km
-            </span>
-            <span class="detalhe-item">
-              <i class="fas fa-tint"></i>
-              Sistema de drenagem
-            </span>
-          </div>
-          
-          <a href="#" class="card-link">Ver projeto completo <i class="fas fa-arrow-right"></i></a>
+        <div class="sobre-img hidden delay-1">
+            <img src="{% static 'img/rafa.JPG' %}" alt="Vista aérea dos Parques Urbanos">
         </div>
+    </div>
+</section>
+<section id="parques">
+  <h2 class="section-title hidden">Nossos Parques</h2>
+  <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;" class="hidden">
+    Conheça em detalhes cada um destes espaços urbanos transformadores.
+  </p>
+  
+  <div class="parques-grid">
+    <!-- Parque Fernão Dias -->
+    <div class="parque-card hidden delay-1">
+      <div class="card-img">
+        <img src="{% static 'img/parques.jpg' %}" alt="Parque Fernão Dias">
       </div>
-      
-      <!-- Parque Gentil Diniz -->
-      <div class="parque-card hidden delay-2">
-        <div class="card-img">
-          <img src="{% static 'img/oi.jpg' %}" alt="Parque Gentil Diniz">
+      <div class="card-content">
+        <h3>Parque Fernão Dias</h3>
+        <p class="localizacao">
+          <i class="fas fa-map-marker-alt"></i>
+          Bairro Camilo Prates, Contagem - MG
+        </p>
+        <p>Parque linear localizado ao longo da avenida Fernão Dias, com áreas verdes, pistas para caminhada e espaço para lazer e convivência comunitária.</p>
+        
+        <div class="detalhes">
+          <span class="detalhe-item">
+            <i class="fas fa-ruler-combined"></i>
+            Aproximadamente 10 hectares
+          </span>
+          <span class="detalhe-item">
+            <i class="fas fa-tree"></i>
+            Diversas árvores nativas e exóticas
+          </span>
         </div>
-        <div class="card-content">
-          <h3>Parque Gentil Diniz</h3>
-          <p class="localizacao">
-            <i class="fas fa-map-marker-alt"></i>
-            Centro - Área revitalizada
-          </p>
-          <p>Um oásis urbano com lago artificial, mirante e amplas áreas de convivência, projetado para ser um refúgio verde no coração da cidade.</p>
-          
-          <div class="detalhes">
-            <span class="detalhe-item">
-              <i class="fas fa-ruler-combined"></i>
-              8 hectares
-            </span>
-            <span class="detalhe-item">
-              <i class="fas fa-tree"></i>
-              800 árvores
-            </span>
-          </div>
-          
-          <div class="detalhes">
-            <span class="detalhe-item">
-              <i class="fas fa-water"></i>
-              Lago 2.500m²
-            </span>
-            <span class="detalhe-item">
-              <i class="fas fa-utensils"></i>
-              Quiosques
-            </span>
-          </div>
-          
-          <a href="#" class="card-link">Ver projeto completo <i class="fas fa-arrow-right"></i></a>
+        
+        <div class="detalhes">
+          <span class="detalhe-item">
+            <i class="fas fa-walking"></i>
+            Trilhas para caminhada e corrida
+          </span>
+          <span class="detalhe-item">
+            <i class="fas fa-bicycle"></i>
+            Ciclovia integrada ao parque
+          </span>
         </div>
-      </div>
-      
-      <!-- Parque Sapucaias -->
-      <div class="parque-card hidden delay-3">
-        <div class="card-img">
-          <img src="{% static 'img/parque.JPG' %}" alt="Parque Sapucaias">
-        </div>
-        <div class="card-content">
-          <h3>Parque Sapucaias</h3>
-          <p class="localizacao">
-            <i class="fas fa-map-marker-alt"></i>
-            Zona Leste - Vale natural
-          </p>
-          <p>Preservação de área natural com trilhas ecológicas, centro de educação ambiental e espaços para práticas esportivas não competitivas.</p>
-          
-          <div class="detalhes">
-            <span class="detalhe-item">
-              <i class="fas fa-ruler-combined"></i>
-              15 hectares
-            </span>
-            <span class="detalhe-item">
-              <i class="fas fa-tree"></i>
-              Mata nativa
-            </span>
-          </div>
-          
-          <div class="detalhes">
-            <span class="detalhe-item">
-              <i class="fas fa-hiking"></i>
-              Trilhas 7km
-            </span>
-            <span class="detalhe-item">
-              <i class="fas fa-book"></i>
-              Centro educativo
-            </span>
-          </div>
-          
-          <a href="#" class="card-link">Ver projeto completo <i class="fas fa-arrow-right"></i></a>
-        </div>
+        
+        <a href="#" class="card-link">Ver projeto completo <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
-  </section>
+    
+    <!-- Parque Gentil Diniz -->
+    <div class="parque-card hidden delay-2">
+      <div class="card-img">
+        <img src="{% static 'img/oi.jpg' %}" alt="Parque Gentil Diniz">
+      </div>
+      <div class="card-content">
+        <h3>Parque Gentil Diniz</h3>
+        <p class="localizacao">
+          <i class="fas fa-map-marker-alt"></i>
+          Bairro Eldorado, Contagem - MG
+        </p>
+        <p>Parque urbano com lago, playground, áreas para piquenique e espaços esportivos, ideal para lazer e atividades ao ar livre em família.</p>
+        
+        <div class="detalhes">
+          <span class="detalhe-item">
+            <i class="fas fa-ruler-combined"></i>
+            Cerca de 7 hectares
+          </span>
+          <span class="detalhe-item">
+            <i class="fas fa-tree"></i>
+            Jardins e áreas arborizadas
+          </span>
+        </div>
+        
+        <div class="detalhes">
+          <span class="detalhe-item">
+            <i class="fas fa-water"></i>
+            Lago artificial para contemplação
+          </span>
+          <span class="detalhe-item">
+            <i class="fas fa-utensils"></i>
+            Quiosques e áreas de descanso
+          </span>
+        </div>
+        
+        <a href="#" class="card-link">Ver projeto completo <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    
+    <!-- Parque Sapucaias -->
+    <div class="parque-card hidden delay-3">
+      <div class="card-img">
+        <img src="{% static 'img/parque.JPG' %}" alt="Parque Sapucaias">
+      </div>
+      <div class="card-content">
+        <h3>Parque Sapucaias</h3>
+        <p class="localizacao">
+          <i class="fas fa-map-marker-alt"></i>
+          Bairro Sapucaias, Contagem - MG
+        </p>
+        <p>Área de preservação ambiental com trilhas ecológicas, espaços para educação ambiental e lazer em contato com a natureza.</p>
+        
+        <div class="detalhes">
+          <span class="detalhe-item">
+            <i class="fas fa-ruler-combined"></i>
+            Aproximadamente 15 hectares
+          </span>
+          <span class="detalhe-item">
+            <i class="fas fa-tree"></i>
+            Mata nativa preservada
+          </span>
+        </div>
+        
+        <div class="detalhes">
+          <span class="detalhe-item">
+            <i class="fas fa-hiking"></i>
+            Trilhas ecológicas para caminhada
+          </span>
+          <span class="detalhe-item">
+            <i class="fas fa-book"></i>
+            Centro de educação ambiental
+          </span>
+        </div>
+        
+        <a href="#" class="card-link">Ver projeto completo <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contato">
   <div class="contato-container">
 
