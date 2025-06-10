@@ -5,10 +5,7 @@
 
   <div class="hero">
     <h1 class="hidden">Parques Fernão Dias, Gentil Diniz e Sapucaias</h1>
-    <p class="hidden delay-1">Três exemplos de como a arquitetura urbana pode transformar espaços públicos em áreas verdes sustentáveis e acolhedoras.</p>
-    <a href="#parques" class="btn hidden delay-2">Conheça os Parques</a>
   </div>
-
   <section id="sobre">
     <h2 class="section-title hidden">Sobre os Parques</h2>
     <div class="sobre-content">
@@ -146,58 +143,30 @@
       </div>
     </div>
   </section>
+<section id="contato">
+  <div class="contato-container">
 
-  <section id="contato">
     <h2 class="section-title hidden">Visite os Parques</h2>
-    <div class="contato-container">
-      <div class="contato-info hidden">
-        <h3>Informações para visitação</h3>
-        <p>Os parques estão abertos ao público diariamente, com entrada gratuita. Confira os horários e programações especiais.</p>
-        
-        <ul>
-          <li>
-            <i class="fas fa-clock"></i>
-            <span>Funcionamento: 6h às 20h (todos os dias)</span>
-          </li>
-          <li>
-            <i class="fas fa-phone-alt"></i>
-            <span>Central de informações: (31) 3456-7890</span>
-          </li>
-          <li>
-            <i class="fas fa-bus"></i>
-            <span>Acessibilidade: Todos os parques têm transporte público próximo</span>
-          </li>
-        </ul>
-      </div>
-      
-      <form class="hidden delay-1">
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="parque">Parque de interesse</label>
-          <select id="parque" required>
-            <option value="">Selecione</option>
-            <option value="fernao">Parque Fernão Dias</option>
-            <option value="gentil">Parque Gentil Diniz</option>
-            <option value="sapucaias">Parque Sapucaias</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" rows="3" required></textarea>
-        </div>
-        
-        <button type="submit" class="form-btn">Enviar Mensagem</button>
-      </form>
+      <h3 style="margin-top: 0;">Informações para Visitação</h3>
+      <p>Venha conhecer nossos parques! Eles estão abertos todos os dias com entrada gratuita. Aproveite a natureza, participe das programações especiais e desfrute de momentos inesquecíveis com sua família e amigos.</p>
+
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 1rem;">
+          <i class="fas fa-clock" style="margin-right: 0.5rem; color: #FF4500;"></i>
+          <strong>Horário de Funcionamento:</strong> das 8h às 18h – todos os dias
+        </li>
+        <li style="margin-bottom: 1rem;">
+          <i class="fas fa-phone-alt" style="margin-right: 0.5rem; color: #FF4500;"></i>
+          <strong>Central de Informações:</strong> (31) 3456-7890
+        </li>
+        <li>
+          <i class="fas fa-bus" style="margin-right: 0.5rem; color: #FF4500;"></i>
+          <strong>Acessibilidade:</strong> Todos os parques são atendidos por transporte público próximo
+        </li>
+      </ul>
     </div>
-  </section>
+
+  </div>
+</section>
+
 {% endblock body %}
