@@ -496,4 +496,187 @@
           }
         }
 
+:root {
+          --cor-clara: #fefdeb;
+          --cor-1: #c2c7aa;
+          --cor-2: #867606;
+          --cor-3: #747c47;
+          --cor-escura: #3a4a14;
+          --sombra: 0 4px 12px rgba(58, 74, 20, 0.15);
+          --transicao: all 0.3s ease;
+        }
 
+/* Estilos base */
+.secao-parques {
+  padding: 3rem 1rem;
+  background-color: var(--verde-claro);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos para a imagem */
+.imagem-destaque {
+  margin: 0 auto 2.5rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.imagem-mata {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  border: 3px solid var(--verde-primario);
+}
+
+.legenda-imagem {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--verde-escuro);
+  font-style: italic;
+}
+
+/* Estilos para o card */
+.card-informacoes {
+  background-color: var(--branco);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
+  border: 2px solid var(--verde-secundario);
+}
+
+.card-titulo {
+  margin: 0 0 1.5rem 0;
+  color: var(--verde-escuro);
+  font-size: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.card-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--verde-primario);
+}
+
+.card-texto {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: var(--cinza-texto);
+}
+
+/* Estilos para a lista de informações */
+.lista-informacoes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.item-informacao {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background-color: var(--verde-claro);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.item-informacao:hover {
+  transform: translateY(-2px);
+}
+
+.icone {
+  font-size: 1.25rem;
+  color: var(--verde-primario);
+  margin-top: 0.15rem;
+}
+
+.informacao-detalhe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.informacao-rotulo {
+  color: var(--verde-escuro);
+  font-weight: 600;
+}
+
+.informacao-valor {
+  color: var(--cinza-texto);
+}
+
+.informacao-link {
+  color: var(--verde-primario);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.informacao-link:hover,
+.informacao-link:focus {
+  color: var(--verde-escuro);
+  text-decoration: underline;
+}
+
+/* Classe para conteúdo acessível apenas para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .secao-parques {
+    padding: 2rem 1rem;
+  }
+  
+  .card-informacoes {
+    padding: 1.5rem;
+  }
+  
+  .card-titulo {
+    font-size: 1.3rem;
+  }
+  
+  .item-informacao {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.zoom-hidden {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.zoom-hidden.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Animação no botão de voltar ao topo */
+#scrollToTopBtn:hover {
+  background-color: var(--cor-3);
+}
