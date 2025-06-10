@@ -2,21 +2,53 @@
 {% load static %}
 {% block body %}
 
+<!-- Hero Section com Vídeo e Textos Responsivos -->
+<div class="hero">
+  <!-- Container do Vídeo -->
+  <div class="video-container">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://player.vimeo.com/video/1092238847?background=1&autoplay=1&loop=1&muted=1&quality=1080p" 
+        frameborder="0" 
+        allow="autoplay; fullscreen" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 
- <div class="hero">
-    <h1 class="hidden">Parques Urbanos Fernão Dias, Gentil Diniz e Sapucaias</h1>
+  <!-- Logo/Título no Topo -->
+  <div class="top-logo">
+    <h2>Vivo Contagem</h2>
+  </div>
+
+  <!-- Título Principal no Rodapé -->
+  <div class="hero-content">
+    <h1>Parques Urbanos Fernão Dias, Gentil Diniz e Sapucaias</h1>
+  </div>
 </div>
 
-<section id="sobre">
-    <h2 class="section-title hidden">Conheça o Projeto Viva Contagem</h2>
-    <div class="sobre-content">
-        <div>
-            <p class="hidden">Os Parques Urbanos Fernão Dias, Gentil Diniz e Sapucaias constituem a mais recente geração de áreas verdes públicas, meticulosamente projetadas para fomentar qualidade de vida, sustentabilidade ambiental e integração sociocomunitária.</p>
-            <p class="hidden delay-1">Cada unidade foi concebida mediante criterioso planejamento urbano, atendendo às particularidades de seu entorno, preservando uma identidade visual coesa que materializa os princípios de preservação ecológica e acessibilidade universal.</p>
-            <p class="hidden delay-2">Estes empreendimentos sintetizam paisagismo com espécies nativas, infraestrutura ambientalmente sustentável e design urbano inovador, resultando em espaços públicos que harmonizam funcionalidade urbana e valor estético.</p>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<section id="sobre" style="padding: 20px; max-width: 1200px; margin: 0 auto;">
+    <h2 class="section-title hidden" style="text-align: center; font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: 30px;">
+        Conheça o Projeto Vivo Contagem
+    </h2>
+    
+    <div class="sobre-content" style="display: flex; flex-direction: column; gap: 30px;">
+        <div class="text-content" style="order: 2;">
+            <p class="hidden" style="font-size: clamp(1rem, 1.2vw, 1.1rem); line-height: 1.6; margin-bottom: 20px;">
+                Os Parques Urbanos Fernão Dias, Gentil Diniz e Sapucaias constituem a mais recente geração de áreas verdes públicas, meticulosamente projetadas para fomentar qualidade de vida, sustentabilidade ambiental e integração sociocomunitária.
+            </p>
+            <p class="hidden delay-1" style="font-size: clamp(1rem, 1.2vw, 1.1rem); line-height: 1.6; margin-bottom: 20px;">
+                Cada unidade foi concebida mediante criterioso planejamento urbano, atendendo às particularidades de seu entorno, preservando uma identidade visual coesa que materializa os princípios de preservação ecológica e acessibilidade universal.
+            </p>
+            <p class="hidden delay-2" style="font-size: clamp(1rem, 1.2vw, 1.1rem); line-height: 1.6;">
+                Estes empreendimentos sintetizam paisagismo com espécies nativas, infraestrutura ambientalmente sustentável e design urbano inovador, resultando em espaços públicos que harmonizam funcionalidade urbana e valor estético.
+            </p>
         </div>
-        <div class="sobre-img hidden delay-1">
-            <img src="{% static 'img/rafa.JPG' %}" alt="Vista aérea dos Parques Urbanos">
+        
+        <div class="sobre-img hidden delay-1" style="order: 1; width: 100%; max-width: 600px; margin: 0 auto; border-radius: 8px; overflow: hidden;">
+            <img src="{% static 'img/rafa.JPG' %}" alt="Vista aérea dos Parques Urbanos" 
+                 style="width: 100%; height: auto; object-fit: cover; transition: transform 0.3s ease;">
         </div>
     </div>
 </section>
