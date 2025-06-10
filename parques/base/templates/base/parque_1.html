@@ -1,196 +1,202 @@
+{% extends 'base/base.html' %}
 {% load static %}
+{% block body %}
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parque Fernão Dias - Parques Urbanos</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
-          rel="stylesheet">
+    <title>Conheça o Parque Fernão Dias em Contagem</title>
+    <meta name="description" content="Conheça o Parque Fernão Dias em Contagem - uma das maiores áreas verdes da região com trilhas, ciclovias e rica biodiversidade">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+    <link rel="icon" href="{% static 'img/contagem.png' %}">
 </head>
+
 <body>
-<header class="header">
-    <div class="container">
-        <div class="header-content">
-            <a href="/" class="logo">
-                <img src="{% static 'img/logo.svg' %}" alt="Parques Urbanos" class="logo-img">
-                <span class="logo-text">Parques Urbanos</span>
-            </a>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link active">Parques</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
-
-<main>
-    <section class="hero" style="background-image: url('{% static 'img/parque.JPG' %}');">
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'img/parque.JPG' %}') no-repeat center center/cover; padding: 100px 20px; text-align: center; color: white;">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Parque Fernão Dias</h1>
-                <p class="hero-subtitle">Zona Norte - Área de antiga rodovia</p>
-            </div>
+            <h1 class="hero-title" style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 20px;">Parque Fernão Dias</h1>
         </div>
     </section>
 
-    <section class="park-info">
+    <!-- Park Info Section -->
+    <section class="park-info py-5">
         <div class="container">
-            <div class="park-description">
-                <div class="description-text">
-                    <h2 class="section-title">Sobre o Parque</h2>
-                    <p>Um parque linear que transformou um corredor de infraestrutura em espaço de convivência, com
-                        ciclovias, jardins de chuva e áreas de descanso. O Parque Fernão Dias é um exemplo de como áreas
-                        urbanas podem ser revitalizadas para benefício da comunidade e do meio ambiente.</p>
-
-                    <p>O projeto foi desenvolvido com foco na sustentabilidade e na integração com o entorno, oferecendo
-                        aos moradores da região um espaço de lazer, prática esportiva e contato com a natureza.</p>
-                </div>
-                <div class="description-image">
-                    <img src="{% static 'img/oi.jpg' %}" alt="Trilha no Parque Fernão Dias" class="park-img">
-                </div>
-            </div>
-
-            <div class="park-features">
-                <div class="feature-card">
-                    <div class="feature-icon area-icon"></div>
-                    <div class="feature-info">
-                        <span class="feature-value">12 hectares</span>
-                        <span class="feature-label">Área Total</span>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title mb-4" style="color: #867606; font-family: 'Playfair Display', serif;">Sobre o Parque</h2>
+                    <div class="description-text">
+                        <p class="lead">🌲 <strong>Natureza, Esporte e Conhecimento em Contagem!</strong> 🚴‍♀🌿</p>
+                        <p>Com aproximadamente 98,5 hectares, o Parque Fernão Dias é uma das maiores áreas verdes da Região Metropolitana de Belo Horizonte e um importante centro de convivência, lazer e preservação ambiental.</p>
+                        <p>Sede do Instituto Estadual de Florestas (IEF), o parque conta com:</p>
+                        <ul class="mb-4">
+                            <li>Trilhas ecológicas</li>
+                            <li>Pista de mountain bike</li>
+                            <li>Velódromo para ciclistas</li>
+                            <li>Quadras poliesportivas</li>
+                            <li>Playground</li>
+                            <li>Nascente preservada</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon trees-icon"></div>
-                    <div class="feature-info">
-                        <span class="feature-value">1.200 árvores</span>
-                        <span class="feature-label">Flora</span>
+                <div class="col-lg-6">
+                    <img src="{% static 'img/mata.jpg' %}" alt="Trilha no Parque Fernão Dias" class="img-fluid rounded shadow" style="max-height: 500px; width: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="park-features py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
+                        <div class="feature-icon mb-3" style="font-size: 2rem;">🌳</div>
+                        <div class="feature-info">
+                            <span class="feature-value d-block fw-bold fs-5">98,5 hectares</span>
+                            <span class="feature-label text-muted">Área Total</span>
+                        </div>
                     </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon bike-icon"></div>
-                    <div class="feature-info">
-                        <span class="feature-value">Ciclovia 5km</span>
-                        <span class="feature-label">Mobilidade</span>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
+                        <div class="feature-icon mb-3" style="font-size: 2rem;">🌿</div>
+                        <div class="feature-info">
+                            <span class="feature-value d-block fw-bold fs-5">100+ espécies</span>
+                            <span class="feature-label text-muted">Flora Diversificada</span>
+                        </div>
                     </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon water-icon"></div>
-                    <div class="feature-info">
-                        <span class="feature-value">Sistema de drenagem</span>
-                        <span class="feature-label">Sustentabilidade</span>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
+                        <div class="feature-icon mb-3" style="font-size: 2rem;">🚶‍♂️</div>
+                        <div class="feature-info">
+                            <span class="feature-value d-block fw-bold fs-5">5km de trilhas</span>
+                            <span class="feature-label text-muted">Caminhada e Corrida</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
+                        <div class="feature-icon mb-3" style="font-size: 2rem;">🚴‍♀️</div>
+                        <div class="feature-info">
+                            <span class="feature-value d-block fw-bold fs-5">Velódromo</span>
+                            <span class="feature-label text-muted">Ciclismo</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="park-gallery">
+    <!-- Gallery Section -->
+    <section class="park-gallery py-5">
         <div class="container">
-            <h2 class="section-title">Galeria</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="{% static 'img/parques.jpg' %}" alt="Área de lazer do Parque Fernão Dias" class="gallery-img">
+            <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">Galeria</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="{% static 'img/parques.jpg' %}" alt="Área de lazer do Parque Fernão Dias" class="img-fluid rounded shadow gallery-img" style="height: 250px; width: 100%; object-fit: cover;">
                 </div>
-                <div class="gallery-item">
-                    <img src="{% static 'img/parque.JPG' %}" alt="Vista do lago do Parque Fernão Dias" class="gallery-img">
+                <div class="col-md-4">
+                    <img src="{% static 'img/parque.JPG' %}" alt="Vista do lago do Parque Fernão Dias" class="img-fluid rounded shadow gallery-img" style="height: 250px; width: 100%; object-fit: cover;">
                 </div>
-                <div class="gallery-item">
-                    <img src="{% static 'img/oi.jpg' %}" alt="Trilha ecológica do Parque Fernão Dias" class="gallery-img">
+                <div class="col-md-4">
+                    <img src="{% static 'img/oi.jpg' %}" alt="Trilha ecológica do Parque Fernão Dias" class="img-fluid rounded shadow gallery-img" style="height: 250px; width: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="park-activities">
+    <!-- Activities Section -->
+    <section class="park-activities py-5 bg-light">
         <div class="container">
-            <h2 class="section-title">Atividades</h2>
-            <div class="activities-grid">
-                <div class="activity-card">
-                    <h3 class="activity-title">Caminhadas</h3>
-                    <p class="activity-description">Trilhas bem sinalizadas para caminhadas em meio à natureza, com
-                        diferentes níveis de dificuldade.</p>
+            <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">Atividades</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="activity-card p-4 rounded shadow-sm bg-white h-100">
+                        <h3 class="activity-title fw-bold mb-3">Caminhadas</h3>
+                        <p class="activity-description">Trilhas bem sinalizadas para caminhadas em meio à natureza, com diferentes níveis de dificuldade.</p>
+                    </div>
                 </div>
-                <div class="activity-card">
-                    <h3 class="activity-title">Ciclismo</h3>
-                    <p class="activity-description">Ciclovia de 5km que percorre todo o parque, ideal para passeios de
-                        bicicleta em família.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="activity-card p-4 rounded shadow-sm bg-white h-100">
+                        <h3 class="activity-title fw-bold mb-3">Ciclismo</h3>
+                        <p class="activity-description">Ciclovia de 5km que percorre todo o parque, ideal para passeios de bicicleta em família.</p>
+                    </div>
                 </div>
-                <div class="activity-card">
-                    <h3 class="activity-title">Piqueniques</h3>
-                    <p class="activity-description">Áreas gramadas e sombreadas, perfeitas para piqueniques e momentos
-                        de descanso.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="activity-card p-4 rounded shadow-sm bg-white h-100">
+                        <h3 class="activity-title fw-bold mb-3">Piqueniques</h3>
+                        <p class="activity-description">Áreas gramadas e sombreadas, perfeitas para piqueniques e momentos de descanso.</p>
+                    </div>
                 </div>
-                <div class="activity-card">
-                    <h3 class="activity-title">Educação Ambiental</h3>
-                    <p class="activity-description">Programas educativos sobre preservação ambiental e sustentabilidade
-                        urbana.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="activity-card p-4 rounded shadow-sm bg-white h-100">
+                        <h3 class="activity-title fw-bold mb-3">Educação Ambiental</h3>
+                        <p class="activity-description">Programas educativos sobre preservação ambiental e sustentabilidade urbana.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="park-visit">
+    <!-- Visit Info Section -->
+    <section class="park-visit py-5">
         <div class="container">
-            <h2 class="section-title">Informações para Visitação</h2>
-            <div class="visit-info">
-                <div class="visit-card">
-                    <h3 class="visit-title">Horário de Funcionamento</h3>
-                    <p class="visit-text">Todos os dias, das 6h às 20h</p>
+            <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">Informações para Visitação</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="visit-card p-4 rounded shadow-sm h-100" style="background-color: #f8f9fa;">
+                        <h3 class="visit-title fw-bold mb-3"><i class="fas fa-clock me-2"></i>Horário</h3>
+                        <p class="visit-text">Todos os dias, das 6h às 20h</p>
+                    </div>
                 </div>
-                <div class="visit-card">
-                    <h3 class="visit-title">Como Chegar</h3>
-                    <p class="visit-text">Zona Norte da cidade, próximo à antiga rodovia Fernão Dias. Acesso por
-                        transporte público nas linhas 123 e 456.</p>
+                <div class="col-md-4">
+                    <div class="visit-card p-4 rounded shadow-sm h-100" style="background-color: #f8f9fa;">
+                        <h3 class="visit-title fw-bold mb-3"><i class="fas fa-bus me-2"></i>Como Chegar</h3>
+                        <p class="visit-text">Zona Norte da cidade, próximo à antiga rodovia Fernão Dias. Acesso por transporte público nas linhas 123 e 456.</p>
+                    </div>
                 </div>
-                <div class="visit-card">
-                    <h3 class="visit-title">Acessibilidade</h3>
-                    <p class="visit-text">O parque conta com rampas de acesso, banheiros adaptados e sinalização em
-                        braile.</p>
+                <div class="col-md-4">
+                    <div class="visit-card p-4 rounded shadow-sm h-100" style="background-color: #f8f9fa;">
+                        <h3 class="visit-title fw-bold mb-3"><i class="fas fa-wheelchair me-2"></i>Acessibilidade</h3>
+                        <p class="visit-text">O parque conta com rampas de acesso, banheiros adaptados e sinalização em braile.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="park-map">
+    <!-- Map Section -->
+    <section class="park-map py-5 bg-light">
         <div class="container">
-            <h2 class="section-title">Localização</h2>
-            <div class="map-container">
-                <!-- Aqui entraria um mapa interativo que seria integrado pelo backend -->
-                <div class="map-placeholder">
-                    <p>Mapa do Parque Fernão Dias</p>
+            <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">Localização</h2>
+            <div class="map-container rounded shadow overflow-hidden">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.2185153464085!2d-44.01071928460752!3d-19.89471383944988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa68f6d60ab735b%3A0x98b58c2b3fe1ec4e!2sParque%20Fern%C3%A3o%20Dias!5e0!3m2!1spt-BR!2sbr!4v1718044812345!5m2!1spt-BR!2sbr" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="map-info p-4 bg-white">
+                    <h3 class="fw-bold">Parque Fernão Dias</h3>
+                    <p class="localizacao mt-2">
+                        <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                        Bairro Camilo Prates, Contagem - MG
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-</main>
-
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <span class="logo-text">Parques Urbanos</span>
-            </div>
-            <div class="footer-info">
-                <p>© 2025 Parques Urbanos. Todos os direitos reservados.</p>
-                <p>Central de informações: (31) 3456-7890</p>
-            </div>
-            <div class="footer-nav">
-                <ul class="footer-nav-list">
-                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Sobre</a></li>
-                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Parques</a></li>
-                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
 </body>
 </html>
+{% endblock body %}
