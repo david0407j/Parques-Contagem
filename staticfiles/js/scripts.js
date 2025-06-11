@@ -1,38 +1,36 @@
- // Scroll Animation
-    document.addEventListener('DOMContentLoaded', () => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      }, {
-        threshold: 0.1
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Scroll Reveal com IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
       });
+    }, {
+      threshold: 0.1
+    });
 
-      const hiddenElements = document.querySelectorAll('.hidden');
-      hiddenElements.forEach(el => observer.observe(el));
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach(el => observer.observe(el));
 
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: 'smooth'
-            });
-          }
-        });
+    // Scroll suave para âncoras
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
       });
     });
 
-    // Header scroll effect
+    // Efeito no header ao rolar
     window.addEventListener('scroll', () => {
       const header = document.querySelector('header');
       if (window.scrollY > 50) {
@@ -70,4 +68,12 @@
         document.querySelectorAll('.hidden').forEach(el => {
             observer.observe(el);
         });
+    });
+=======
+
+      // Mostrar ou esconder botão "Voltar ao Topo"
+      const topBtn = document.querySelector('#scrollToTopBtn');
+      if (topBtn) {
+        topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+      }
     });

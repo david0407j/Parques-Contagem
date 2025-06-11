@@ -540,6 +540,7 @@ footer {
     @media (max-width: 768px) {
         .footer-content {
             flex-direction: column;
+
             gap: 30px !important;
         }
         
@@ -567,3 +568,4 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+       
