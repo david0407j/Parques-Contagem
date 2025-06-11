@@ -1,4 +1,4 @@
-<script>
+
   document.addEventListener('DOMContentLoaded', () => {
     // Scroll Reveal com IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
@@ -70,7 +70,6 @@
             observer.observe(el);
         });
     });
-=======
 
       // Mostrar ou esconder botão "Voltar ao Topo"
       const topBtn = document.querySelector('#scrollToTopBtn');
@@ -110,5 +109,4 @@
       observer.observe(img);
       img.classList.add('zoom-hidden');
     });
-  });
-</script>
+

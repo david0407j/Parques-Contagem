@@ -302,11 +302,6 @@ section {
   color: var(--cor-escura);
 }
 
-.contato-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
 
 .contato-info h3 {
   color: var(--cor-escura);
@@ -540,6 +535,7 @@ footer {
     @media (max-width: 768px) {
         .footer-content {
             flex-direction: column;
+
             gap: 30px !important;
         }
         
@@ -567,3 +563,4 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+       

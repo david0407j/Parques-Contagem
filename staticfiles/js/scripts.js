@@ -1,4 +1,4 @@
-<script>
+
   document.addEventListener('DOMContentLoaded', () => {
     // Scroll Reveal com IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
@@ -40,6 +40,7 @@
         header.style.boxShadow = 'var(--sombra)';
         header.style.padding = '1.5rem 2rem';
       }
+
     });
     // Observador de interseção para animações
     document.addEventListener('DOMContentLoaded', function() {
@@ -69,7 +70,6 @@
             observer.observe(el);
         });
     });
-=======
 
       // Mostrar ou esconder botão "Voltar ao Topo"
       const topBtn = document.querySelector('#scrollToTopBtn');
@@ -77,3 +77,36 @@
         topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
       }
     });
+
+    // Botão voltar ao topo
+    const topBtn = document.createElement('button');
+    topBtn.id = 'scrollToTopBtn';
+    topBtn.innerHTML = '⬆';
+    document.body.appendChild(topBtn);
+    Object.assign(topBtn.style, {
+      position: 'fixed',
+      bottom: '20px',
+      right: '20px',
+      padding: '10px 15px',
+      background: 'var(--cor-escura)',
+      color: 'var(--cor-clara)',
+      border: 'none',
+      borderRadius: '50%',
+      fontSize: '1.2rem',
+      cursor: 'pointer',
+      display: 'none',
+      zIndex: 1000,
+      transition: 'opacity 0.3s ease',
+    });
+
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Animação extra para imagens com classe .zoom-on-scroll
+    const zoomElements = document.querySelectorAll('.zoom-on-scroll');
+    zoomElements.forEach(img => {
+      observer.observe(img);
+      img.classList.add('zoom-hidden');
+    });
+
