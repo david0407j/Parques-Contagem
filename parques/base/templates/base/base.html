@@ -21,8 +21,11 @@
 <div class="container-fluid">
     <header style="display: flex; flex-direction: column; align-items: center; padding: 10px; gap: 15px;">
         <div class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;">
-            <img src="{% static 'img/contagem.png' %}" alt="Logo Vivo Contagem" style="max-height: 50px; object-fit: contain; background: transparent;">
-            <span style="font-size: 1.2rem;">Vivo Contagem</span>
+          <a href="{% url 'base:base' %}" style="display: flex; align-items: center; text-decoration: none; color: darkgreen;">
+    <img src="{% static 'img/contagem.png' %}" alt="Logo Vivo Contagem" style="max-height: 50px; object-fit: contain; background: transparent; margin-right: 8px;">
+    <span style="font-size: 1.2rem; color: inherit;">Vivo Contagem</span>
+</a>
+
         </div>
         <nav style="display: flex; justify-content: space-around; width: 100%;">
             <a href="{% url 'base:base' %}#sobre" style="color: darkgreen; text-decoration: none; padding: 5px 10px;">Sobre</a>
