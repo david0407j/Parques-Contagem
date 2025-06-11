@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viva Contagem</title>
+<
+    <title>Vivo Contagem</title>
+
     <meta name="description"
-          content="Conheça os projetos dos parques Fernão Dias, Gentil Diniz e Sapucaias - exemplos de arquitetura urbana sustentável">
+          content="Conheça o parque Fernão Dias, Gentil Diniz e parque Sapucaias em Contagem!">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -17,17 +19,19 @@
 </head>
 <body>
 <div class="container-fluid">
-    <header>
-        <div class="logo">
-            <img src="{% static 'img/contagem.png' %}" alt="Logo Viva contagem" style="max-height: 50px; object-fit: contain;">
-            <span>Viva Contagem</span>
+    <header style="display: flex; flex-direction: column; align-items: center; padding: 10px; gap: 15px;">
+        <div class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;">
+            <img src="{% static 'img/contagem.png' %}" alt="Logo Vivo Contagem" style="max-height: 50px; object-fit: contain; background: transparent;">
+            <span style="font-size: 1.2rem;">Vivo Contagem</span>
         </div>
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#parques">Parques</a>
-            <a href="#contato">Contato</a>
+        <nav style="display: flex; justify-content: space-around; width: 100%;">
+            <a href="{% url 'base:base' %}#sobre" style="color: darkgreen; text-decoration: none; padding: 5px 10px;">Sobre</a>
+<a href="{% url 'base:base' %}#parques" style="color: darkgreen; text-decoration: none; padding: 5px 10px;">Parques</a>
+<a href="{% url 'base:base' %}#contato" style="color: darkgreen; text-decoration: none; padding: 5px 10px;">Contato</a>
+>
         </nav>
     </header>
+</div>
 
     {% block body %}{% endblock body %}
 

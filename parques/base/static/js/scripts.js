@@ -41,6 +41,37 @@
         header.style.padding = '1.5rem 2rem';
       }
 
+    });
+    // Observador de interseção para animações
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.hidden').forEach(el => {
+            observer.observe(el);
+        });
+    });
+     // Ativa animações quando o elemento aparece na tela
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.hidden').forEach(el => {
+            observer.observe(el);
+        });
+    });
+=======
+
       // Mostrar ou esconder botão "Voltar ao Topo"
       const topBtn = document.querySelector('#scrollToTopBtn');
       if (topBtn) {
