@@ -2,42 +2,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<
-    <title>Vivo Contagem</title>
-
-    <meta name="description"
-          content="Conheça o parque Fernão Dias, Gentil Diniz e parque Sapucaias em Contagem!">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Vivo Contagem{% endblock %}</title>
+    <link rel="icon" href="{% block icon %}{% static 'img/contagem.png' %}{% endblock %}">
+    
+    <!-- CSS e scripts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <script src="{% static 'js/scripts.js' %}"></script>
-    <link rel="icon" href="{% static 'img/contagem.png' %}">
 </head>
 <body>
-<div class="container-fluid">
-    <header style="display: flex; flex-direction: column; align-items: center; padding: 10px; gap: 15px;">
-        <div class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;">
-            <img src="{% static 'img/contagem.png' %}" alt="Logo Vivo Contagem" style="max-height: 50px; object-fit: contain; background: transparent;">
-            <span style="font-size: 1.2rem;">Vivo Contagem</span>
-        </div>
-        <nav style="display: flex; justify-content: space-around; width: 100%;">
-            <a href="{% url 'base:base' %}#sobre" style="color: darkgreen; text-decoration: none; padding: 5px 10px;">Sobre</a>
-<a href="{% url 'base:base' %}#parques" style="color: darkgreen; text-decoration: none; padding: 5px 10px;">Parques</a>
-<a href="{% url 'base:base' %}#contato" style="color: darkgreen; text-decoration: none; padding: 5px 10px;">Contato</a>
->
-        </nav>
-    </header>
-</div>
+    {% block content %}
+    <div class="container-fluid">
+        <header style="display: flex; flex-direction: column; align-items: center; padding: 10px; gap: 15px;">
+            <div class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;">
+                <a href="{% url 'base:base' %}" style="display: flex; align-items: center; text-decoration: none; color: darkgreen;">
+                    <img src="{% static 'img/contagem.png' %}" alt="Logo Vivo Contagem" style="max-height: 50px; object-fit: contain; background: transparent; margin-right: 8px;">
+                    <span style="font-size: 1.2rem; color: inherit;">Vivo Contagem</span>
+                </a>
+            </div>
+            <nav style="display: flex; justify-content: space-around; width: 100%;">
+                <a href="{% url 'base:base' %}#sobre" style="color: darkgreen; text-decoration: none; padding: 5px 10px;">Sobre</a>
+                <a href="{% url 'base:base' %}#parques" style="color: darkgreen; text-decoration: none; padding: 5px 10px;">Parques</a>
+                <a href="{% url 'base:base' %}#contato" style="color: darkgreen; text-decoration: none; padding: 5px 10px;">Contato</a>
+            </nav>
+        </header>
 
-    {% block body %}{% endblock body %}
+        {% block body %}
+        <!-- Conteúdo específico das páginas -->
+        {% endblock body %}
+    </div>
+    {% endblock %}
 
-</div>
-
-{% include 'base/footer.html' %}
-
+    {% include 'base/footer.html' %}
 </body>
 </html>

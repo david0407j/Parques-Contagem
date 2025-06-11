@@ -17,14 +17,19 @@
                     <i class="fab fa-youtube"></i>
                 </a>
             </div>
+<<<<<<< HEAD
 
+=======
+        </div>
+          <img src="{% static 'img/contagem.png' %}" alt="Logo Vivo Contagem" style="max-height: 50px; object-fit: contain; background: transparent; margin-right: 8px;">
+>>>>>>> 59366d8 (Atualizações diversas)
 
         <div class="footer-col hidden delay-1" style="flex: 1; min-width: 250px;">
             <h3 class="footer-title">Parques</h3>
             <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 8px;"><a href="#parques" class="footer-link">Fernão Dias</a></li>
-                <li style="margin-bottom: 8px;"><a href="#parques" class="footer-link">Gentil Diniz</a></li>
-                <li style="margin-bottom: 8px;"><a href="#parques" class="footer-link">Sapucaias</a></li>
+                <li style="margin-bottom: 8px;"><a href="{% url 'base:parque_1' %}" class="footer-link">Fernão Dias</a></li>
+                <li style="margin-bottom: 8px;"><a href="{% url 'base:parque_2' %}" class="footer-link">Gentil Diniz</a></li>
+                <li style="margin-bottom: 8px;"><a href="{% url 'base:parque_3' %}" class="footer-link">Sapucaias</a></li>
             </ul>
         </div>
 
