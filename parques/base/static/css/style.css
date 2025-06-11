@@ -302,11 +302,6 @@ section {
   color: var(--cor-escura);
 }
 
-.contato-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
 
 .contato-info h3 {
   color: var(--cor-escura);
