@@ -6,7 +6,7 @@ from parques.django_assertions import assert_contains
 
 @pytest.fixture
 def resp(client):
-    resp = client.get(reverse('base:parque_2'))
+    resp = client.get(reverse('base:parque_3'))
     return resp
 
 
@@ -20,20 +20,20 @@ def test_favicon(resp):
 
 
 def test_link_para_secao_sobre_esta_na_pagina(resp):
-    assert_contains(resp, '<a href="#sobre"')
+    assert_contains(resp, f'<a href="{reverse("base:base")}#sobre"')
 
 
 def test_link_para_secao_parques_esta_na_pagina(resp):
-    assert_contains(resp, '<a href="#parques"')
+    assert_contains(resp, f'<a href="{reverse("base:base")}#parques"')
 
 
 def test_link_para_secao_contato_esta_na_pagina(resp):
-    assert_contains(resp, '<a href="#contato"')
+    assert_contains(resp, f'<a href="{reverse("base:base")}#contato"')
 
 
 # testes do corpo da página
 def test_imagem_inicial_esta_na_pagina(resp):
-    assert_contains(resp, '<img src="/static/img/mata.jpg"')
+    assert_contains(resp, "url('/static/img/parque.JPG')")
 
 
 def test_tres_imagens_da_galeria_esta_na_pagina(resp):
@@ -43,11 +43,11 @@ def test_tres_imagens_da_galeria_esta_na_pagina(resp):
 
 
 def test_localizacao_esta_na_pagina(resp):
-    assert_contains(resp, 'src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!'
-                          '1d3772.2185153464085!2d-44.01071928460752!3d-19.894713839'
-                          '44988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0'
-                          'xa68f6d60ab735b%3A0x98b58c2b3fe1ec4e!2sParque%20Fern%C3%A'
-                          '3o%20Dias!5e0!3m2!1spt-BR!2sbr!4v1718044812345!5m2!1spt-BR!2sbr" ')
+    assert_contains(resp, 'src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1'
+                          'd3772.1001324292697!2d-44.0600733!3d-19.8990542!2m3!1f0!2f'
+                          '0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa68f8f82a29c13%3'
+                          'A0xc74a60de7c9f5ad2!2sParque%20Sapucaias%2C%20Contagem%20-'
+                          '%20MG!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr"')
 
 
 # testes do rodapé da página

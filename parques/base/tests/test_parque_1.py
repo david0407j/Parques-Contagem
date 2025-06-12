@@ -20,20 +20,20 @@ def test_favicon(resp):
 
 
 def test_link_para_secao_sobre_esta_na_pagina(resp):
-    assert_contains(resp, '<a href="#sobre"')
+    assert_contains(resp, f'<a href="{reverse("base:base")}#sobre"')
 
 
 def test_link_para_secao_parques_esta_na_pagina(resp):
-    assert_contains(resp, '<a href="#parques"')
+    assert_contains(resp, f'<a href="{reverse("base:base")}#parques"')
 
 
 def test_link_para_secao_contato_esta_na_pagina(resp):
-    assert_contains(resp, '<a href="#contato"')
+    assert_contains(resp, f'<a href="{reverse("base:base")}#contato"')
 
 
 # testes do corpo da página
 def test_imagem_inicial_esta_na_pagina(resp):
-    assert_contains(resp, '<img src="/static/img/mata.jpg"')
+    assert_contains(resp, "url('/static/img/parques.jpg')")
 
 
 def test_tres_imagens_da_galeria_esta_na_pagina(resp):

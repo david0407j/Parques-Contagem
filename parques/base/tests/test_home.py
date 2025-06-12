@@ -20,15 +20,15 @@ def test_favicon(resp):
 
 
 def test_link_para_secao_sobre_esta_na_pagina(resp):
-    assert_contains(resp, '<a href="#sobre"')
+    assert_contains(resp, f'<a href="{reverse("base:base")}#sobre"')
 
 
 def test_link_para_secao_parques_esta_na_pagina(resp):
-    assert_contains(resp, '<a href="#parques"')
+    assert_contains(resp, f'<a href="{reverse("base:base")}#parques"')
 
 
 def test_link_para_secao_contato_esta_na_pagina(resp):
-    assert_contains(resp, '<a href="#contato"')
+    assert_contains(resp, f'<a href="{reverse("base:base")}#contato"')
 
 
 # testes do corpo da página
@@ -52,11 +52,11 @@ def test_tres_imagens_da_secao_parques_esta_na_pagina(resp):
 
 
 def test_horario_de_funcionamento_esta_na_pagina(resp):
-    assert_contains(resp, '<strong>Horário de Funcionamento:</strong> das 8h às 18h – todos os dias')
+    assert_contains(resp, '<strong>Horário de Funcionamento:</strong> das 8h às 16h – todos os dias')
 
 
 def test_central_de_informacoes_esta_na_pagina(resp):
-    assert_contains(resp, '<strong>Central de Informações:</strong> (31) 3456-7890')
+    assert_contains(resp, '<strong>Central de Informações:</strong> (31) 3911-7960')
 
 
 def test_email_esta_na_pagina(resp):
