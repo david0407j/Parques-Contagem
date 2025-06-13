@@ -160,7 +160,7 @@ section {
 .section-title::after {
   content: '';
   display: block;
-  width: 80px;
+  width: 0px;
   height: 4px;
   background-color: var(--cor-3);
   margin: 1rem auto;
