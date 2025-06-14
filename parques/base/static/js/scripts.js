@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+      
     });
 
     // Efeito no header ao rolar
