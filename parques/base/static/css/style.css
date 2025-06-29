@@ -587,3 +587,29 @@ footer {
 .visible {
   /* Seus estilos para elementos visíveis */
 }
+.gallery-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Efeito hover (zoom suave) */
+.carousel-item img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* Responsividade por tamanho de tela */
+@media (max-width: 768px) {
+  .gallery-img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-img {
+    height: 200px;
+  }
+}

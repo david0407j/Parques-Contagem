@@ -121,61 +121,69 @@ USE_L10N = True
 
 USE_TZ = True
 
+# CONFIGURAÇÃO DE ESTÁTICOS NO AMBIENTE DE DESENVOLVIMENTO
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-# configuração de ambiente de desenvolvimento
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
-AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID", default=None)
 COLLECTFAST_ENABLED = False
 
+# CONFIGURAÇÃO DE ESTÁTICOS NO S3 AWS
 
-# STORAGE CONFIGURATION IN S3 AWS
-# ------------------------------------------------------------------------------
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 if AWS_ACCESS_KEY_ID:
-    AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
-    AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME")
-    AWS_S3_OBJECT_PARAMETERS = {
-        "CacheControl": "max-age=86400",
-    }
-    AWS_PRELOAD_METADATA = True
-    AWS_AUTO_CREATE_BUCKET = False
-    AWS_QUERYSTRING_AUTH = True
-    AWS_DEFAULT_ACL = "private"
-
-    COLLECTFAST_ENABLED = True
-
     # Static Assets
-    # ------------------------------------------------------------------------------
-    STATICFILES_STORAGE = "s3_folder_storage.s3.StaticStorage"
-    STATIC_S3_PATH = "static"
-    STATIC_ROOT = f"/{STATIC_S3_PATH}/"
-    STATIC_URL = (
-        f"//{AWS_STORAGE_BUCKET_NAME}.s3.sa-east-1.amazonaws.com//{STATIC_S3_PATH}/"
-    )
-    ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
+    # --------------------------------------------------------------------------------
+    STATIC_S3_PATH = 'static'
+    STATIC_ROOT = f'/{STATIC_S3_PATH}/'
+    STATIC_URL = f'//{config("AWS_STORAGE_BUCKET_NAME")}.s3.sa-east-1.amazonaws.com//{STATIC_S3_PATH}/'
 
     # Upload Media Folder
-    DEFAULT_FILE_STORAGE = "s3_folder_storage.s3.DefaultStorage"
-    DEFAULT_S3_PATH = "media"
-    MEDIA_ROOT = f"/{DEFAULT_S3_PATH}/"
-    MEDIA_URL = f"//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{DEFAULT_S3_PATH}/"
+    # --------------------------------------------------------------------------------
+    DEFAULT_S3_PATH = 'media'
+    MEDIA_ROOT = f'/{DEFAULT_S3_PATH}/'
+    MEDIA_URL = f'//{config("AWS_STORAGE_BUCKET_NAME")}.s3.sa-east-1.amazonaws.com//{DEFAULT_S3_PATH}/'
 
-    INSTALLED_APPS.append("s3_folder_storage")
-    INSTALLED_APPS.append("storages")
+    STORAGES = {
+        "default": {
+            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+            "OPTIONS": {
+                "access_key": config('AWS_ACCESS_KEY_ID'),
+                "secret_key": config('AWS_SECRET_ACCESS_KEY'),
+                "bucket_name": config('AWS_STORAGE_BUCKET_NAME'),
+                "default_acl": 'private',
+                "object_parameters": {'CacheControl': 'max-age=86400', },
+                "location": DEFAULT_S3_PATH,
+            },
+        },
+        "staticfiles": {
+            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+            "OPTIONS": {
+                "access_key": config('AWS_ACCESS_KEY_ID'),
+                "secret_key": config('AWS_SECRET_ACCESS_KEY'),
+                "bucket_name": config('AWS_STORAGE_BUCKET_NAME'),
+                "default_acl": 'private',
+                "object_parameters": {'CacheControl': 'max-age=86400', },
+                "location": STATIC_S3_PATH,
+            },
+        },
+    }
+
+    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
+    COLLECTFAST_ENABLED = True
+    AWS_PRELOAD_METADATA = True
+    AWS_AUTO_CREATE_BUCKET = False
+
+    INSTALLED_APPS.append('storages')
+
 # Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-
 
 SENTRY_DSN = config("SENTRY_DSN", default=None)
 if SENTRY_DSN:

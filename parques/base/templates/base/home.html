@@ -1,20 +1,22 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block body %}
-
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Hero Section com Vídeo e Textos Responsivos -->
 <div class="hero">
   <!-- Container do Vídeo -->
   <div class="video-container">
-    <div class="video-wrapper">
-      <iframe 
-        src="https://player.vimeo.com/video/1092238847?background=1&autoplay=1&loop=1&muted=1&quality=1080p" 
-        frameborder="0" 
-        allow="autoplay; fullscreen" 
-        allowfullscreen>
-      </iframe>
-    </div>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://player.vimeo.com/video/1092238847?background=1&autoplay=1&loop=1&muted=1&quality=1080p" 
+      frameborder="0" 
+      allow="autoplay; fullscreen" 
+      allowfullscreen>
+    </iframe>
   </div>
+</div>
+
 
   <!-- Logo/Título no Topo -->
   <div class="top-logo">
@@ -87,9 +89,10 @@
 
     <div class="detalhes">
       <span class="detalhe-item">
-        <i class="fas fa-walking"></i>
-        7,49 km de trilhas ecológicas
-      </span>
+  <i class="fas fa-bicycle"></i>
+  Mountain Bike
+</span>
+
      <span class="detalhe-item">
   <i class="fas fa-hiking"></i>
   Trilha ecológica
@@ -103,7 +106,7 @@
     <div class="parque-card hidden delay-2">
       <div class="card-img">
         <a href="{% url 'base:parque_2' %}">
-          <img src="{% static 'img/oi.jpg' %}" alt="Parque Gentil Diniz">
+          <img src="{% static 'img/xereu2.jpg' %}" alt="Parque Gentil Diniz">
         </a>
       </div>
       <div class="card-content">
@@ -177,10 +180,19 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
-
+        <!-- Controles (opcional) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próxima</span>
+        </button>
+    </div>
+</section>
 <section id="contato">
   <div class="contato-container">
 

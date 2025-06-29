@@ -3,6 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100vw;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -12,11 +18,24 @@ body {
   background-color: #c2c7aa;
 }
 
-.container {
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Containers e Layouts */
+.container, 
+.park-description, 
+.park-features, 
+.gallery-grid, 
+.activities-grid, 
+.visit-info, 
+.footer-content {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,12 +58,7 @@ a:hover {
   color: #4a5a29;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
+/* Títulos */
 .section-title {
   font-size: 2.5rem;
   color: #5a6e32;
@@ -60,13 +74,10 @@ img {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 0; /* largura zero remove a linha */
+  width: 0;
   height: 3px;
-  background-color: transparent; /* transparente também remove a linha */
+  background-color: transparent;
 }
-
-
-
 
 /* Header */
 .header {
@@ -81,6 +92,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -98,14 +110,17 @@ img {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .nav-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -146,6 +161,7 @@ img {
   color: #4a5a29;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
 }
 
 .hero::before {
@@ -162,6 +178,8 @@ img {
   position: relative;
   z-index: 1;
   padding-bottom: 3rem;
+  width: 100%;
+  text-align: center;
 }
 
 .hero-title {
@@ -176,7 +194,7 @@ img {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Park Info Section */
+/* Park Info */
 .park-info {
   padding: 4rem 0;
 }
@@ -185,7 +203,6 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-bottom: 3rem;
   align-items: center;
 }
 
@@ -282,6 +299,34 @@ img {
 
 .gallery-item:hover .gallery-img {
   transform: scale(1.05);
+}
+
+/* Carrossel Galeria */
+#carouselGaleria {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#carouselGaleria .gallery-img {
+  width: 100%;
+  height: auto;
+  max-height: 700px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+#carouselGaleria:hover .gallery-img {
+  transform: scale(1.02);
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
 }
 
 /* Activities Section */
@@ -413,6 +458,10 @@ img {
   .section-title {
     font-size: 2.2rem;
   }
+
+  #carouselGaleria .gallery-img {
+    max-height: 500px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -431,11 +480,18 @@ img {
   .section-title {
     font-size: 2rem;
   }
+
+  #carouselGaleria {
+    max-width: 95%;
+  }
+
+  #carouselGaleria .gallery-img {
+    max-height: 400px;
+  }
 }
 
 @media (max-width: 576px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
+  #carouselGaleria .gallery-img {
+    max-height: 300px;
   }
 }
