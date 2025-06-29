@@ -3,53 +3,69 @@
 {% block body %}
 <!DOCTYPE html>
 <html lang="pt-br">
-<head> 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Parque Sapucaias em Contagem{% endblock title %}</title>
-  <meta name="description" content="{% block description %}Conheça o Parque Sapucaias em Contagem - uma das maiores áreas verdes da região com trilhas, ciclovias e rica biodiversidade.{% endblock description %}">
-  <link rel="icon" href="{% static 'img/contagem.png' %}">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <script src="{% static 'js/scripts.js' %}" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Parque Sapucaias em Contagem{% endblock title %}</title>
+    <meta name="description"
+          content="{% block description %}Conheça o Parque Sapucaias em Contagem - uma das maiores áreas verdes da região com trilhas, ciclovias e rica biodiversidade.{% endblock description %}">
+    <link rel="icon" href="{% static 'img/contagem.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'img/contagem.png' %}">
+    <script src="{% static 'js/scripts.js' %}" defer></script>
 </head>
 <body>
-<body>
-    <!-- Hero Section -->
-    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'img/parque.JPG' %}') no-repeat center center/cover; padding: 100px 20px; text-align: center; color: white;">
-        <div class="container">
-            <h1 class="hero-title" style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 20px;">Parque Sapucaias</h1>
-        </div>
-    </section>
+<!-- Hero Section -->
+<section class="hero-section"
+         style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'img/parque.JPG' %}') no-repeat center center/cover; padding: 100px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h1 class="hero-title" style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 20px;">Parque Sapucaias</h1>
+    </div>
+</section>
 
-   <!-- Park Info Section -->
+<!-- Park Info Section -->
 <section class="park-info py-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="section-title mb-4" style="color: #867606; font-family: 'Playfair Display', serif;">SOBRE O PARQUE</h2>
+                <h2 class="section-title mb-4" style="color: #867606; font-family: 'Playfair Display', serif;">SOBRE O
+                    PARQUE</h2>
                 <div class="description-text">
                     <p class="lead">🌿 <strong>Um refúgio verde no coração de Contagem!</strong> 🏞️</p>
-                    <p>O Parque Sapucaias é um dos principais espaços de convivência e lazer da cidade de Contagem, com aproximadamente 37.000 m² de área verde, sendo 20.000 m² compostos por mata nativa e uma lagoa natural.</p>
-                    <p>Com infraestrutura pensada para atender todas as idades, o parque oferece uma quadra poliesportiva coberta, ideal para a prática de esportes em qualquer época do ano, além de uma academia popular ao ar livre – a Academia da Cidade –, equipada com diversos aparelhos para atividades físicas.</p>
-                    <p>Para quem busca tranquilidade e contato com a natureza, o parque conta com trilhas de caminhada com cerca de 762 metros, que atravessam áreas arborizadas e oferecem um percurso leve e agradável. Um dos destaques é a lagoa natural, utilizada pelos frequentadores para momentos de pesca e contemplação.</p>
-                    <p>O espaço também é voltado para o público infantil, com dois ambientes destinados às brincadeiras: a Praça de Brinquedos e a Praça de Cores e Formas, formando um amplo playground seguro e acolhedor.</p>
-                    <p>A estrutura do parque é completada por banheiros, bebedouros e vestiários, garantindo conforto e acessibilidade aos visitantes.</p>
-                    <p>O Parque Sapucaias se consolida como um verdadeiro refúgio urbano, promovendo saúde, lazer, convívio social e o fortalecimento da relação entre a comunidade e o meio ambiente.</p>
+                    <p>O Parque Sapucaias é um dos principais espaços de convivência e lazer da cidade de Contagem, com
+                        aproximadamente 37.000 m² de área verde, sendo 20.000 m² compostos por mata nativa e uma lagoa
+                        natural.</p>
+                    <p>Com infraestrutura pensada para atender todas as idades, o parque oferece uma quadra
+                        poliesportiva coberta, ideal para a prática de esportes em qualquer época do ano, além de uma
+                        academia popular ao ar livre – a Academia da Cidade –, equipada com diversos aparelhos para
+                        atividades físicas.</p>
+                    <p>Para quem busca tranquilidade e contato com a natureza, o parque conta com trilhas de caminhada
+                        com cerca de 762 metros, que atravessam áreas arborizadas e oferecem um percurso leve e
+                        agradável. Um dos destaques é a lagoa natural, utilizada pelos frequentadores para momentos de
+                        pesca e contemplação.</p>
+                    <p>O espaço também é voltado para o público infantil, com dois ambientes destinados às brincadeiras:
+                        a Praça de Brinquedos e a Praça de Cores e Formas, formando um amplo playground seguro e
+                        acolhedor.</p>
+                    <p>A estrutura do parque é completada por banheiros, bebedouros e vestiários, garantindo conforto e
+                        acessibilidade aos visitantes.</p>
+                    <p>O Parque Sapucaias se consolida como um verdadeiro refúgio urbano, promovendo saúde, lazer,
+                        convívio social e o fortalecimento da relação entre a comunidade e o meio ambiente.</p>
                 </div>
             </div>
             <div class="col-lg-6 d-flex justify-content-center">
-    <img src="{% static 'img/foto2.jpg' %}" alt="Parque Sapucaias em Contagem" 
-         class="img-fluid rounded shadow" 
-         style="height: 800px; width: auto; object-fit: cover;">
-</div>
+                <img src="{% static 'img/foto2.jpg' %}" alt="Parque Sapucaias em Contagem"
+                     class="img-fluid rounded shadow"
+                     style="height: 800px; width: auto; object-fit: cover;">
+            </div>
 
         </div>
     </div>
 </section>
-    <!-- Features Section -->
+<!-- Features Section -->
 <section class="park-features py-5 bg-light">
     <div class="container">
         <div class="row g-4">
@@ -63,7 +79,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Nascente -->
             <div class="col-md-3 col-sm-6">
                 <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
@@ -74,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Lagoa -->
             <div class="col-md-3 col-sm-6">
                 <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
@@ -85,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Trilhas -->
             <div class="col-md-3 col-sm-6">
                 <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
@@ -96,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Quadras Esportivas -->
             <div class="col-md-3 col-sm-6">
                 <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
@@ -107,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Pista de Caminhada -->
             <div class="col-md-3 col-sm-6">
                 <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
@@ -118,7 +134,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Espaço para cards adicionais -->
             <div class="col-md-3 col-sm-6">
                 <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
@@ -129,7 +145,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Espaço para cards adicionais -->
             <div class="col-md-3 col-sm-6">
                 <div class="feature-card text-center p-4 rounded shadow-sm bg-white h-100">
@@ -143,112 +159,197 @@
         </div>
     </div>
 </section>
- 
-    <!-- Gallery Section -->
-    <section class="park-gallery py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">GALERIA</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <img src="{% static 'img/parques.jpg' %}" alt="Área de lazer do Parque Fernão Dias" class="img-fluid rounded shadow gallery-img" style="height: 250px; width: 100%; object-fit: cover;">
-                </div>
-                <div class="col-md-4">
-                    <img src="{% static 'img/parque.JPG' %}" alt="Vista do lago do Parque Fernão Dias" class="img-fluid rounded shadow gallery-img" style="height: 250px; width: 100%; object-fit: cover;">
-                </div>
-                <div class="col-md-4">
-                    <img src="{% static 'img/oi.jpg' %}" alt="Trilha ecológica do Parque Fernão Dias" class="img-fluid rounded shadow gallery-img" style="height: 250px; width: 100%; object-fit: cover;">
-                </div>
+
+<!-- Gallery Section -->
+<section id="galeria3" class="container my-5">
+    <h2 class="section-title text-center" style="color: #867606; font-family: 'Playfair Display', serif;">GALERIA</h2>
+
+    <div id="carouselGaleria3" class="carousel slide carousel-fade mx-auto" data-bs-ride="carousel"
+         data-bs-interval="3000" style="max-width: 1200px;">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/parque3_foto_1.JPG' %}" class="d-block w-100 gallery-img rounded" alt="Amigos">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_2.JPG' %}" class="d-block w-100 gallery-img rounded" alt="Trilha">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_3.JPG' %}" class="d-block w-100 gallery-img rounded" alt="Rafa">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_4.JPG' %}" class="d-block w-100 gallery-img rounded"
+                     alt="Viaduto Contagem">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_5.JPG' %}" class="d-block w-100 gallery-img rounded" alt="Leo">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_6.JPG' %}" class="d-block w-100 gallery-img rounded" alt="Deus">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_7.JPG' %}" class="d-block w-100 gallery-img rounded" alt="Foto 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_8.JPG' %}" class="d-block w-100 gallery-img rounded" alt="Foto 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_9.JPG' %}" class="d-block w-100 gallery-img rounded" alt="Foto 3">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_10.JPG' %}" class="d-block w-100 gallery-img rounded" alt="Tim">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_11.JPG' %}" class="d-block w-100 gallery-img rounded" alt="Vivo">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_12.JPG' %}" class="d-block w-100 gallery-img rounded"
+                     alt="Parques">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_14.JPG' %}" class="d-block w-100 gallery-img rounded"
+                     alt="Parques">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_15.JPG' %}" class="d-block w-100 gallery-img rounded"
+                     alt="Parques">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_17.JPG' %}" class="d-block w-100 gallery-img rounded"
+                     alt="Parques">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_18.JPG' %}" class="d-block w-100 gallery-img rounded"
+                     alt="Parques">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_19.JPG' %}" class="d-block w-100 gallery-img rounded"
+                     alt="Parques">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_20.JPG' %}" class="d-block w-100 gallery-img rounded"
+                     alt="Parques">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_21.JPG' %}" class="d-block w-100 gallery-img rounded"
+                     alt="Parques">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/parque3_foto_22.JPG' %}" class="d-block w-100 gallery-img rounded"
+                     alt="Parques">
             </div>
         </div>
-    </section>
 
-  
-    <!-- Activities Section -->
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria3" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria3" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+</section>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Activities Section -->
 <section class="park-activities py-5 bg-light">
     <div class="container">
-        <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">ATIVIDADES</h2>
+        <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">
+            ATIVIDADES</h2>
         <div class="row g-4">
             <div class="col-md-3 col-sm-6">
                 <div class="activity-card p-4 rounded shadow-sm bg-white h-100">
                     <h3 class="activity-title fw-bold mb-3">Caminhadas</h3>
                     <p class="activity-description">
- trilhas ecológicas, academia popular, pesca amadora e aulas de FitDance em meio à natureza para todas as idades.
-</p>
+                        trilhas ecológicas, academia popular, pesca amadora e aulas de FitDance em meio à natureza para
+                        todas as idades.
+                    </p>
 
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="activity-card p-4 rounded shadow-sm bg-white h-100">
                     <h3 class="activity-title fw-bold mb-3">Ciclismo</h3>
-                    <p class="activity-description">Ciclovia de 5km que percorre todo o parque, ideal para passeios de bicicleta em família.</p>
+                    <p class="activity-description">Ciclovia de 5km que percorre todo o parque, ideal para passeios de
+                        bicicleta em família.</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="activity-card p-4 rounded shadow-sm bg-white h-100">
                     <h3 class="activity-title fw-bold mb-3">Piqueniques</h3>
-                    <p class="activity-description">Áreas gramadas e sombreadas, perfeitas para piqueniques e momentos de descanso.</p>
+                    <p class="activity-description">Áreas gramadas e sombreadas, perfeitas para piqueniques e momentos
+                        de descanso.</p>
                 </div>
             </div>
             <!-- Novas atividades -->
             <div class="col-md-3 col-sm-6">
                 <div class="activity-card p-4 rounded shadow-sm bg-white h-100">
                     <h3 class="activity-title fw-bold mb-3">Preservação Ambiental</h3>
-                    <p class="activity-description">Espaço dedicado à conservação da mata nativa e à valorização da biodiversidade local.</p>
+                    <p class="activity-description">Espaço dedicado à conservação da mata nativa e à valorização da
+                        biodiversidade local.</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="activity-card p-4 rounded shadow-sm bg-white h-100">
                     <h3 class="activity-title fw-bold mb-3">Trilhas Ecológicas</h3>
-                    <p class="activity-description">Experiências guiadas por trilhas ecológicas para contato direto com a fauna e flora nativas.</p>
+                    <p class="activity-description">Experiências guiadas por trilhas ecológicas para contato direto com
+                        a fauna e flora nativas.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-    <!-- Visit Info Section -->
-    <section class="park-visit py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">INFORMAÇÃOES PARA VISITAÇÃO</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="visit-card p-4 rounded shadow-sm h-100" style="background-color: #f8f9fa;">
-                        <h3 class="visit-title fw-bold mb-3"><i class="fas fa-clock me-2"></i>Horário</h3>
-                        <p class="visit-text">Todos os dias, das 8h às 16h</p>
-                    </div>
+<!-- Visit Info Section -->
+<section class="park-visit py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">
+            INFORMAÇÃOES PARA VISITAÇÃO</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="visit-card p-4 rounded shadow-sm h-100" style="background-color: #f8f9fa;">
+                    <h3 class="visit-title fw-bold mb-3"><i class="fas fa-clock me-2"></i>Horário</h3>
+                    <p class="visit-text">Todos os dias, das 8h às 16h</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="visit-card p-4 rounded shadow-sm h-100" style="background-color: #f8f9fa;">
-                        <h3 class="visit-title fw-bold mb-3"><i class="fas fa-bus me-2"></i>Endereço</h3>
-                       <p class="visit-text">
-Avenida das Tulipas, 1.155 – Sapucaias I, Contagem – MG
-</p>
+            </div>
+            <div class="col-md-4">
+                <div class="visit-card p-4 rounded shadow-sm h-100" style="background-color: #f8f9fa;">
+                    <h3 class="visit-title fw-bold mb-3"><i class="fas fa-bus me-2"></i>Endereço</h3>
+                    <p class="visit-text">
+                        Avenida das Tulipas, 1.155 – Sapucaias I, Contagem – MG
+                    </p>
 
-                    </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="visit-card p-4 rounded shadow-sm h-100" style="background-color: #f8f9fa;">
-                        <h3 class="visit-title fw-bold mb-3"><i class="fas fa-wheelchair me-2"></i>Acessibilidade</h3>
-                        <p class="visit-text">O parque conta com rampas de acesso, banheiros adaptados e sinalização em braile.</p>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="visit-card p-4 rounded shadow-sm h-100" style="background-color: #f8f9fa;">
+                    <h3 class="visit-title fw-bold mb-3"><i class="fas fa-wheelchair me-2"></i>Acessibilidade</h3>
+                    <p class="visit-text">O parque conta com rampas de acesso, banheiros adaptados e sinalização em
+                        braile.</p>
                 </div>
             </div>
         </div>
-    </section>
-   <!-- Map Section – Parque Sapucaias (tempo real) -->
+    </div>
+</section>
+<!-- Map Section – Parque Sapucaias (tempo real) -->
 <section class="park-map py-5 bg-light">
     <div class="container">
-        <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">LOCALIZAÇÃO</h2>
+        <h2 class="section-title text-center mb-5" style="color: #867606; font-family: 'Playfair Display', serif;">
+            LOCALIZAÇÃO</h2>
         <div class="map-container rounded shadow overflow-hidden">
-            <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.6688579293244!2d-44.1283599!3d-19.9231581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6ea8611d270b1%3A0x19ab840303b19563!2sParque%20Sapucaias!5e0!3m2!1spt-BR!2sbr!4v1718826825478!5m2!1spt-BR!2sbr" 
-  width="100%" 
-  height="450" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.6688579293244!2d-44.1283599!3d-19.9231581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6ea8611d270b1%3A0x19ab840303b19563!2sParque%20Sapucaias!5e0!3m2!1spt-BR!2sbr!4v1718826825478!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
 
             <div class="map-info p-4 bg-white">
                 <h3 class="fw-bold">Parque Sapucaias</h3>
@@ -256,7 +357,8 @@ Avenida das Tulipas, 1.155 – Sapucaias I, Contagem – MG
                     <i class="fas fa-map-marker-alt text-danger me-2"></i>
                     Bairro Sapucaias, Contagem - MG
                 </p>
-                <a href="https://www.google.com/maps/place/Parque+Sapucaias,+Contagem+-+MG" target="_blank" class="btn btn-primary mt-2">
+                <a href="https://www.google.com/maps/place/Parque+Sapucaias,+Contagem+-+MG" target="_blank"
+                   class="btn btn-primary mt-2">
                     Ver no Google Maps
                 </a>
             </div>
