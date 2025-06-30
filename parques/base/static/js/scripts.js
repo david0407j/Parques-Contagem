@@ -56,3 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const nextButtons = document.querySelectorAll('.vp-preview-next, .vp-preview-next__button');
+        nextButtons.forEach(button => {
+            button.style.display = 'none';
+            button.remove();
+        });
+    }, 3000); // Tempo para garantir que o player carregou
+});
