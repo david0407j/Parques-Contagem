@@ -66,11 +66,19 @@
                         multimídia.</p>
                 </div>
             </div>
-            <!-- Imagem do lado direito -->
-            <div class="col-lg-6 d-flex justify-content-center">
-                <img src="{% static 'img/jane.jpg' %}" alt="Parque Sapucaias em Contagem"
-                     class="img-fluid rounded shadow" style="height: 800px; width: auto; object-fit: cover;"/>
-            </div>
+            <!-- Vídeo do lado direito em formato vertical, maior e com som -->
+<div class="col-lg-6 d-flex justify-content-center align-items-center">
+    <div style="width: 450px; height: 800px; max-width: 100%; overflow: hidden;" class="rounded shadow">
+        <iframe 
+            src="https://www.youtube.com/embed/FFltTLGUNfg?si=1LKNaYfBuMq5AJ_W&autoplay=1&mute=0&loop=1&playlist=FFltTLGUNfg" 
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            style="width: 100%; height: 100%; object-fit: cover;">
+        </iframe>
+    </div>
+</div>
         </div>
     </div>
 </section>
