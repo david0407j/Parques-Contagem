@@ -31,7 +31,6 @@ SECRET_KEY = config("SECRET_KEY")
 DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
-ALLOWED_HOSTS = ['vivocontagem.com.br', 'www.vivocontagem.com.br']
 
 AUTH_USER_MODEL = "base.User"
 

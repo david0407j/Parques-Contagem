@@ -28,60 +28,69 @@
     </div>
 </section>
 
-<!-- Park Info Section -->
 <section class="park-info py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Texto do lado esquerdo -->
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="section-title mb-4"
-                    style="color: #867606; font-family: 'Playfair Display', serif; text-transform: uppercase;">
-                    SOBRE O PARQUE
-                </h2>
-                <div class="description-text" style="font-size: 1.1rem; line-height: 1.6;">
-                    <p class="lead">🏞️ <strong>Memória, Educação Ambiental e Natureza no coração de Contagem</strong> 🌿
-                    </p>
-                    <p>Com cerca de 24.000 m² (aproximadamente 2,4 ha), o Parque Municipal Gentil Diniz está localizado
-                        em pleno centro de Contagem. Construído sobre uma antiga chácara, o espaço abriga o <strong>histórico
-                            Casarão Gentil Diniz</strong>, de 1916, residência da tradicional família Diniz.</p>
-                    <p>O casarão, restaurado e tombado como patrimônio histórico, mantém suas características coloniais
-                        e hoje recebe exposições de artistas locais, promovendo um encontro entre a memória e a cultura
-                        contemporânea.</p>
-                    <p>No centro do parque está o <strong>Centro de Educação Ambiental Várzea das Flores</strong>, com
-                        salas de reunião, sala multimídia e espaços para oficinas socioambientais e encontros
-                        comunitários.</p>
-                    <p>O parque conta com uma infraestrutura completa:</p>
-                    <ul class="mb-4" style="padding-left: 1.2rem;">
-                        <li>Playground e trilhas leves</li>
-                        <li>Anfiteatro e viveiro de mudas</li>
-                        <li>Horta medicinal e orquidário</li>
-                        <li>Bebedouros, banheiros acessíveis e nascentes do córrego das Acácias</li>
-                    </ul>
-                    <p>O pomar do parque abriga mais de 100 jabuticabeiras, além de mangueiras, goiabeiras, jambeiros e
-                        árvores típicas do cerrado como ipês, pau-jacaré e corticeiras. A fauna inclui micos,
-                        caxinguelês e diversas aves como sabiás e bem-te-vis.</p>
-                    <p>Projetos como <strong>"Trilhando o Parque"</strong> oferecem trilhas monitoradas, oficinas
-                        educativas e visitas escolares. Após uma revitalização de R$ 1,8 milhão concluída em 2023, o
-                        parque ganhou novas pontes, recuperação das nascentes e modernização dos equipamentos
-                        multimídia.</p>
-                </div>
-            </div>
-            <!-- Vídeo do lado direito em formato vertical, maior e com som -->
-<div class="col-lg-6 d-flex justify-content-center align-items-center">
-    <div style="width: 450px; height: 800px; max-width: 100%; overflow: hidden;" class="rounded shadow">
-        <iframe 
+  <div class="container">
+    <div class="row align-items-start">
+
+      <!-- Vídeo do lado direito em formato vertical, maior e com som -->
+      <div class="col-lg-6 d-flex justify-content-center align-items-center">
+        <div 
+           style="width: 450px; height: 800px; max-width: 100%; overflow: hidden; margin-top: 80px;" 
+  class="rounded shadow"
+        >
+          <iframe 
             src="https://www.youtube.com/embed/FFltTLGUNfg?si=1LKNaYfBuMq5AJ_W&autoplay=1&mute=0&loop=1&playlist=FFltTLGUNfg" 
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             style="width: 100%; height: 100%; object-fit: cover;">
-        </iframe>
-    </div>
-</div>
+          </iframe>
         </div>
-    </div>
-</section>
+      </div>
+
+    <!-- Texto do lado direito -->
+<div class="col-lg-6">
+  <h2 class="section-title mb-4" style="color: #867606; font-family: 'Playfair Display', serif; text-transform: uppercase;">
+    Sobre o Parque
+  </h2>
+ <img src="{% static 'img/mapa_gentil.jpg' %}" alt="Mapa do Parque Gentil Diniz" style="width:100%; max-width:600px; margin: 15px 0;" />
+  <div class="description-text" style="font-size: 1rem; line-height: 1.5; color: #000000;">
+
+    <p class="lead">🏞️ <strong>Memória, Educação Ambiental e Natureza no coração de Contagem</strong> 🌿</p>
+
+    <p>
+      Com 24.000 m², o Parque Municipal Gentil Diniz está no centro de Contagem. 
+      Surgiu de uma antiga fazenda e hoje abriga árvores frutíferas, nascentes e vegetação típica do cerrado.
+    </p>
+
+    <p>
+      Criado em 1991, o parque preserva um casarão colonial dos séculos XVIII e XIX, tombado como Patrimônio Histórico e hoje sede de exposições culturais.
+    </p>
+
+    <p>
+      No local também funciona o <strong>Centro de Educação Ambiental Várzea das Flores</strong>, com espaços para oficinas e encontros.
+    </p>
+
+    <p><strong>Estrutura:</strong></p>
+    <ul class="mb-4" style="padding-left: 1.2rem;">
+      <li>Playground e trilhas leves</li>
+      <li>Anfiteatro e viveiro de mudas</li>
+      <li>Horta medicinal, orquidário e nascentes</li>
+    </ul>
+
+    <p>
+      O pomar conta com jabuticabeiras, mangueiras e espécies do cerrado. A fauna inclui micos, caxinguelês e aves como sabiás e bem-te-vis.
+    </p>
+
+    <p>
+      Projetos como <strong>"Trilhando o Parque"</strong> promovem trilhas monitoradas e oficinas educativas.
+    </p>
+
+  </div>
+</div>
+
+
 
 <!-- Features Section -->
 <section class="park-features py-5 bg-light">
