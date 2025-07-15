@@ -33,6 +33,13 @@ DEBUG = config("DEBUG", cast=bool)
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
 
 AUTH_USER_MODEL = "base.User"
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "vivocontagem.com.br",
+    "www.vivocontagem.com.br",
+    "parques-contagem.fly.dev"
+]
 
 # Application definition
 

@@ -597,3 +597,51 @@ footer {
   }
 }
 
+.card-content {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.card-content p.localizacao {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.card-content p.localizacao i {
+  margin-right: 6px;
+  color: #867606;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.detalhe-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.93rem;
+  color: #333;
+}
+
+.detalhe-item i {
+  margin-right: 8px;
+  color: #867606;
+  min-width: 20px;
+}
