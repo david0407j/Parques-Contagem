@@ -645,3 +645,31 @@ footer {
   color: #867606;
   min-width: 20px;
 }
+ .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-links a {
+      font-size: 24px;
+      color: hsl(0, 33%, 96%);
+    }
+
+    @media (max-width: 768px) {
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* espaçamento entre os itens */
+}
+
+.detalhe-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaçamento entre o ícone e o texto */
+}
