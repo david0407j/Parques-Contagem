@@ -13,6 +13,6 @@ services:
       - POSTGRES_PORT=5432
       - POSTGRES_DB=Parques_db
     ports:
-      - 5432:5432
+      - 5437:5432
     expose:
       - "5432"

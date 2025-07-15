@@ -33,8 +33,8 @@ def test_link_para_secao_contato_esta_na_pagina(resp):
 
 # testes do corpo da página
 def test_video_dos_parques_esta_na_pagina(resp):
-    assert_contains(resp, 'src="https://player.vimeo.com/video/1092238847?'
-                          'background=1&autoplay=1&loop=1&muted=1&quality=1080p"')
+    assert_contains(resp, 'src="https://player.vimeo.com/video/1097206968?'
+                          'background=1&autoplay=1&loop=1&muted=1&quality=1080p&title=0&byline=0&portrait=0"')
 
 
 def test_titulo_do_video_esta_na_pagina(resp):
@@ -42,12 +42,12 @@ def test_titulo_do_video_esta_na_pagina(resp):
 
 
 def test_imagem_da_secao_sobre_esta_na_pagina(resp):
-    assert_contains(resp, '<img src="/static/img/rafa.JPG"')
+    assert_contains(resp, '<img src="/static/img/Rafa.JPG"')
 
 
 def test_tres_imagens_da_secao_parques_esta_na_pagina(resp):
     assert_contains(resp, '<img src="/static/img/parques.jpg"')
-    assert_contains(resp, '<img src="/static/img/oi.jpg"')
+    assert_contains(resp, '<img src="/static/img/foto2.JPG"')
     assert_contains(resp, '<img src="/static/img/parque.JPG"')
 
 
@@ -56,7 +56,7 @@ def test_horario_de_funcionamento_esta_na_pagina(resp):
 
 
 def test_central_de_informacoes_esta_na_pagina(resp):
-    assert_contains(resp, '<strong>Central de Informações:</strong> (31) 3911-7960')
+    assert_contains(resp, '<strong>Central de Informações:</strong> (31) 3356-6865')
 
 
 def test_email_esta_na_pagina(resp):
@@ -66,15 +66,15 @@ def test_email_esta_na_pagina(resp):
 # testes do rodapé da página
 
 def test_link_para_instagram_esta_no_rodape(resp):
-    assert_contains(resp, '<a href="https://www.instagram.com/"')
+    assert_contains(resp, '<a href="https://www.instagram.com/vivo.contagem?igsh=NWhhYTRlaW9uYjN3"')
 
 
 def test_link_para_tiktok_esta_no_rodape(resp):
-    assert_contains(resp, '<a href="https://www.tiktok.com/"')
+    assert_contains(resp, '<a href="https://www.tiktok.com/@vivo.contagem?_t=ZM-8xrjCIPXiy6&_r=1"')
 
 
 def test_link_para_youtube_esta_no_rodape(resp):
-    assert_contains(resp, '<a href="https://www.youtube.com/"')
+    assert_contains(resp, '<a href="https://www.youtube.com/playlist?list=PLVlAusYJJ6U5OWsbUJDNv0HEYOcs3Z77J"')
 
 
 def test_links_para_as_paginas_dos_parques_esta_no_rodape(resp):

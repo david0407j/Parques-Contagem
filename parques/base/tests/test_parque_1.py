@@ -36,32 +36,46 @@ def test_imagem_inicial_esta_na_pagina(resp):
     assert_contains(resp, "url('/static/img/parques.jpg')")
 
 
-def test_tres_imagens_da_galeria_esta_na_pagina(resp):
+def test_video_inicial_esta_na_pagina(resp):
+    assert_contains(resp, 'src="https://www.youtube.com/embed/SmGIFFwgb1Q?si=Ru0WTg0L_'
+                          'vKq7WhO&autoplay=1&mute=0&loop=1&playlist=SmGIFFwgb1Q"')
+
+
+def test_imagens_da_galeria_carrossel_esta_na_pagina(resp):
+    assert_contains(resp, '<img src="/static/img/amigos.JPG"')
+    assert_contains(resp, '<img src="/static/img/blz.JPG"')
+    assert_contains(resp, '<img src="/static/img/claro.JPG"')
+    assert_contains(resp, '<img src="/static/img/davidson.JPG"')
+    assert_contains(resp, '<img src="/static/img/leo.JPG"')
+    assert_contains(resp, '<img src="/static/img/deus.JPG"')
+    assert_contains(resp, '<img src="/static/img/joia2.JPG"')
+    assert_contains(resp, '<img src="/static/img/joia.JPG"')
+    assert_contains(resp, '<img src="/static/img/joia3.JPG"')
+    assert_contains(resp, '<img src="/static/img/tim.JPG"')
+    assert_contains(resp, '<img src="/static/img/vivo.JPG"')
     assert_contains(resp, '<img src="/static/img/parques.jpg"')
-    assert_contains(resp, '<img src="/static/img/parque.JPG"')
-    assert_contains(resp, '<img src="/static/img/oi.jpg"')
 
 
 def test_localizacao_esta_na_pagina(resp):
-    assert_contains(resp, 'src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!'
-                          '1d3772.2185153464085!2d-44.01071928460752!3d-19.894713839'
-                          '44988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0'
-                          'xa68f6d60ab735b%3A0x98b58c2b3fe1ec4e!2sParque%20Fern%C3%A'
-                          '3o%20Dias!5e0!3m2!1spt-BR!2sbr!4v1718044812345!5m2!1spt-BR!2sbr" ')
+    assert_contains(resp, 'src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.'
+                          '1012914784697!2d-44.0774933!3d-19.9398386!2m3!1f0!2f0!3f0!3m2!1i'
+                          '1024!2i768!4f13.1!3m3!1m2!1s0xa6955e2562291d%3A0x2419451e445d007'
+                          'f!2sParque%20Fern%C3%A3o%20Dias!5e0!3m2!1spt-BR!2sbr!4v171882679'
+                          '2004!5m2!1spt-BR!2sbr"')
 
 
 # testes do rodapé da página
 
 def test_link_para_instagram_esta_no_rodape(resp):
-    assert_contains(resp, '<a href="https://www.instagram.com/"')
+    assert_contains(resp, '<a href="https://www.instagram.com/vivo.contagem?igsh=NWhhYTRlaW9uYjN3"')
 
 
 def test_link_para_tiktok_esta_no_rodape(resp):
-    assert_contains(resp, '<a href="https://www.tiktok.com/"')
+    assert_contains(resp, '<a href="https://www.tiktok.com/@vivo.contagem?_t=ZM-8xrjCIPXiy6&_r=1"')
 
 
 def test_link_para_youtube_esta_no_rodape(resp):
-    assert_contains(resp, '<a href="https://www.youtube.com/"')
+    assert_contains(resp, '<a href="https://www.youtube.com/playlist?list=PLVlAusYJJ6U5OWsbUJDNv0HEYOcs3Z77J"')
 
 
 def test_links_para_as_paginas_dos_parques_esta_no_rodape(resp):
